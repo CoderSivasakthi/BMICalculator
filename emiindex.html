@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="emiindex.css">
+</head>
+<body>
+    <section class="container main-container">
+        <section class="main-block">
+            <div class="menu-bar">
+                <ul type="none">
+                    <li type="none"><button><a href="">Home</a></button></li>
+                    <li type="none"><button><a href="">Fitness</a></button></li>
+                    <li type="none"><button><a href="">Settings</a></button></li>
+                </ul>
+            </div>
+            <div class="data col-sm">
+                <div class="datas row">
+                    <h4 class="name" style="color:white;">BMI Calculator</h4>
+                    <div class="d col-sm">
+                        <div class="gender col">
+                            <p style="font-size: 18px; text-align: center;font-weight: 600;">Gender</p>
+                            <img src="/Emicalculator/male.png" alt="gender-img" class="img" id="gender">
+                        </div>
+                        <div class="weight col">
+                            <p>weight</p>
+                            <p id="weightout">00</p>
+                            
+                        </div>
+                    </div>
+                    <div class="heightofu col">
+                        <p style="font-size: 18px; text-align: center;font-weight: 600;">Height</p>
+                        <img src="/Emicalculator/maleheight.jpg" alt="height-img" id="ht" class="himg">
+                        <p id="heightout" style="text-align: center;"></p>
+                    </div>
+                </div>
+                
+                <div class="userdata row">
+                    <div class="bmi-img col-4">
+                        <img src="/Emicalculator/personlogo.jpg" alt="bmi-img" class="bmiImg" id="bmiImg">
+                         <!-- <p id="bmiImg" class="bmiImg"></p> -->
+                         <p id="res"></p>
+                    </div>
+                    
+                    <div class="userd col">
+                        <div class="dts">
+                            <h2 style="text-align: center;padding: 10px;color: white;"> User data</h2>
+                            <p><Label>Age :</Label>
+                            <input type="number" name="" id="age"></p>
+                            <p><label for="">Height(cm):</label>
+                            <input type="number" name="" id="height"></p>
+                            <p> <label>Weight(Kg):</label>
+                            <input type="number" name="" id="weight"></p>
+                            <div class="gen">
+                                <button type="button" class="btn-info" onclick="male()">Male</button>
+                            <button class="btn-info" type="button" onclick="female()">Female</button>
+                            </div> 
+                        </div>
+                        <div class="rbtn">
+                            <button type="button" onclick="calculate()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container col">
+                <div class="output row">
+                    <div class="bmi">
+                        <p>BMI:</p>
+                        <p id="bmioutput">00.00</p>
+                    </div>
+                    <div class="result"><p>Result:</p><p id="result">wait loading..</p></div>
+                </div>
+            </div>
+            <div class="container col">
+                
+                <div class="msg">
+                    <h2>Message about your bmi:</h2>
+                    <p class="ms" id="msg"></p>
+                </div>
+                
+            </div>
+            
+        </section>
+        <p style="color: white; text-align: center; margin-top: -15px;">&copy;Siva</p>
+        
+    </section>
+    <script src="emi.js"></script>
+</body>
+</html>
